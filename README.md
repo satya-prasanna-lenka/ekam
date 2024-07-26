@@ -16,6 +16,9 @@ This project is a web application created with Vite. The application fetches dat
 - Node.js
 - npm
 
+### Link
+[Preview website](https://ekam-wellness.netlify.app/)
+
 ### Installation
 
 1. Clone the repository:
