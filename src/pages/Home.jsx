@@ -18,6 +18,8 @@ const Home = ({ setProgress }) => {
   const [inputData, setInputData] = useState("");
   const navigate = useNavigate();
 
+  // fetching data according to search
+
   const fetchSearchData = () => {
     setProgress(70);
 
@@ -57,7 +59,7 @@ const Home = ({ setProgress }) => {
         setProgress(100);
       });
   };
-
+  // handeling multiple toast messages problem
   useEffect(() => {
     if (!errorShown) {
       const timer = setTimeout(() => {
@@ -68,20 +70,22 @@ const Home = ({ setProgress }) => {
     }
   }, [errorShown]);
 
+  // fetching data according to the filter selected
+
   const fetchData = (url, byDate) => {
     setProgress(70);
     axios
       .get(url)
       .then((response) => {
         setProgress(100);
-
+        // handeling datefilter as there is no api for date to sort in a range like 2023-2024
         if (byDate) {
           const [startYear, endYear] = FilterIs.byDate
             .split("-")
             .map((year) => parseInt(year, 10));
 
-          const startDate = new Date(`${startYear}-01-01`).getTime() / 1000; // January 1, 2023
-          const endDate = new Date(`${endYear - 1}-12-31`).getTime() / 1000; // December 31, 2024
+          const startDate = new Date(`${startYear}-01-01`).getTime() / 1000;
+          const endDate = new Date(`${endYear - 1}-12-31`).getTime() / 1000;
 
           const filteredData = response.data.filter((item) => {
             return item.date >= startDate && item.date <= endDate;
@@ -128,7 +132,7 @@ const Home = ({ setProgress }) => {
     }
   }, [FilterIs]);
 
-  // Utility function to chunk data into groups of three
+  //  function to chunk data into groups of three ,this is required to show the carousel items.
   const chunkArray = (array, chunkSize) => {
     const chunks = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -137,7 +141,6 @@ const Home = ({ setProgress }) => {
     return chunks;
   };
 
-  // const chunks = chunkArray(data, 3);
   return (
     <>
       <div className="banner_section">

@@ -5,11 +5,12 @@ import { useEffect } from "react";
 const CarouselSection = ({ chunks }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // handeling the carousel default index value
   useEffect(() => {
-    // Reset active index when chunks change
     setActiveIndex(0);
   }, [chunks]);
 
+  // handeling the next and previous buttons
   const goToPrev = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? chunks.length - 1 : prevIndex - 1
