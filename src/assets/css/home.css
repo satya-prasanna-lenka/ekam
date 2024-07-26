@@ -1,0 +1,251 @@
+.banner_section {
+    position: relative;
+    height: 55vh;
+    width: 98%;
+    background-color: rgb(224, 217, 207);
+    margin: 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    border: 0px solid rgb(229, 231, 235);
+    padding: 15px 20px;
+}
+
+.banner_image {
+    position: relative;
+    height: 77%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+
+}
+
+.banner_image img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner_section h4 {
+    margin-top: 7px;
+}
+
+.banner_section p {
+    margin-bottom: 0;
+}
+
+.filterButtons {
+    position: relative;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+
+.filter_by_type {
+    margin-left: 25px;
+}
+
+.left_buttons select {
+    width: 127px;
+    height: 40px;
+    background-color: #1b3252;
+    box-shadow: #00000014 0px 0px 0px;
+    border-radius: 6px;
+    border: 1px solid rgb(209, 213, 219);
+    color: ghostwhite;
+    cursor: pointer;
+}
+
+.right_searcgbar input {
+    padding: 0px 8px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: none;
+    width: 464px;
+    height: 42px;
+    outline: none;
+    background-color: #1b3252;
+    border-radius: 6px;
+    box-shadow: #00000014 0px 0px 0px;
+    border: 1px solid #d1d5db;
+    color: ghostwhite;
+}
+
+.right_searcgbar input::placeholder {
+    color: ghostwhite;
+}
+
+.carousel_sec {
+    min-height: 60vh;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.carousel_sec .carousel {
+    position: relative;
+    height: 90%;
+}
+
+.carousel_sec .carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+.carousel_sec .carousel-item {
+    position: relative;
+    height: 100%;
+}
+
+.cards-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+.carousel_sec .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 448px;
+    height: 100%;
+    background-color: #e0d9cf;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    border: 0px solid #e5e7eb;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.carousel_sec .card img {
+
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border-radius: 16px;
+    border: 0px solid rgb(229, 231, 235);
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carousel_sec .card-body {
+    flex-direction: column;
+    display: flex;
+    align-items: start;
+    text-align: start;
+    padding-left: 0;
+}
+
+.myBtnSec {
+    position: relative;
+    bottom: -15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.myBtnSec button {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: #1b3252 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+    cursor: inherit;
+    opacity: 1;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px;
+    border: 0px solid rgb(229, 231, 235);
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .banner_section {
+        display: none;
+    }
+
+    .filterButtons {
+        flex-direction: column;
+        margin-top: 10px;
+        min-height: 20vh;
+    }
+
+    .left_buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left_buttons select {
+        width: 100%;
+        color: black;
+        background-color: #efefef;
+    }
+
+    .filter_by_type {
+        margin-left: 0px;
+        margin-top: 13px;
+    }
+
+    .right_searcgbar {
+        width: 100%;
+        margin-top: 13px;
+    }
+
+    .right_searcgbar input {
+        width: 100%;
+        color: black;
+        background-color: ghostwhite;
+    }
+
+    .right_searcgbar input::placeholder {
+        color: black;
+    }
+
+    .cards-wrapper {
+
+        flex-direction: column;
+    }
+
+    .carousel_sec .card {
+
+        margin-top: 13px;
+        margin-bottom: 13px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .myBtnSec {
+        bottom: 0px;
+    }
+
+    .myFooter {
+        position: sticky;
+        bottom: 0;
+        background-color: ghostwhite;
+        z-index: 100;
+    }
+
+
+}

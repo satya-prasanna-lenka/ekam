@@ -1,0 +1,30 @@
+.header {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    background-color: #1b3252;
+    display: flex;
+    align-items: center;
+}
+
+.header h3 {
+    position: relative;
+    left: 1%;
+    color: ghostwhite;
+    font-weight: 500;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header h3 {
+        margin-top: 5px;
+
+    }
+}
