@@ -1,8 +1,23 @@
-# React + Vite
+# Wellness Retreats(EKAM)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application created with Vite. The application fetches data from an external API and provides functionalities for sorting the data by date and time, as well as a search feature.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches data from an external API.
+- Sorts data by date and type.
+- Search functionality to filter data.
+
+## Getting Started
+- npm install
+- npm run dev
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/satya-prasanna-lenka/ekam.git
